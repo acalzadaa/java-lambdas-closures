@@ -57,7 +57,7 @@ class LibraryTest {
 			library.getFeaturedBooks().put(b, "some witty text");
 		});
 
-		Assertions.assertEquals(library.getFeaturedBooks().size(), 6);
+		Assertions.assertEquals(6, library.getFeaturedBooks().size());
 
 	}
 
