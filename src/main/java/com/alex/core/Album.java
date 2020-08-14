@@ -14,5 +14,8 @@ import lombok.Setter;
 @Setter
 @RequiredArgsConstructor
 public class Album {
-	private List<Track> trackList;
+	private String name;
+	private List<Track> tracks;
+	private List<Artist> musicians;
+	private Artist mainMusician;
 }

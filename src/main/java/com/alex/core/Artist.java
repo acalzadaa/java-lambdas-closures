@@ -1,8 +1,11 @@
 package com.alex.core;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
@@ -11,7 +14,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @RequiredArgsConstructor
-public class Track {
+public class Artist {
+	@NonNull
 	private String name;
-	private int length;
+
+	private List<Artist> members;
+	@NonNull
+	private String origin;
+	private boolean isSolo;
 }

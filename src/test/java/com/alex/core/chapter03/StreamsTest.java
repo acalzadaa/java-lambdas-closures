@@ -2,14 +2,11 @@ package com.alex.core.chapter03;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import com.alex.core.Album;
 import com.alex.core.Track;
 
 class StreamsTest {
@@ -40,12 +37,12 @@ class StreamsTest {
 	@Test
 	void testMaxAndComparators() {
 		List<Track> tracks = new ArrayList<>();
-		tracks.add(new Track("Bakai", 524));
-		tracks.add(new Track("Violets for Your Furs", 378));
-		tracks.add(new Track("Time Was", 451));
+		tracks.add(new Track("Bakai", 40));
+		tracks.add(new Track("Violets for Your Furs", 240));
+		tracks.add(new Track("Time Was", 50));
 
 		Streams streams = new Streams();
-		Assertions.assertEquals(378, streams.maxs(tracks).getLength());
+		Assertions.assertEquals(240, streams.maxs(tracks).getLength());
 		Assertions.assertEquals("Violets for Your Furs", streams.maxs(tracks).getName());
 	}
 
@@ -57,23 +54,6 @@ class StreamsTest {
 
 		Streams streams = new Streams();
 		Assertions.assertEquals(12, streams.reduces(numbers));
-
-	}
-
-	@Test
-	void testFindLongTracks() {
-		List<Track> tracks = new ArrayList<>();
-		tracks.add(new Track("Bakai", 70));
-		tracks.add(new Track("Violets for Your Furs", 60));
-		tracks.add(new Track("Time Was", 50));
-
-		List<Album> albums = new ArrayList<>();
-		albums.add(new Album(tracks));
-
-		Streams streams = new Streams();
-		Set<String> trackNames = new HashSet<>();
-		trackNames.add("Bakai");
-		Assertions.assertEquals(trackNames, streams.findLongTracks(albums));
 
 	}
 
