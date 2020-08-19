@@ -1,10 +1,10 @@
-package com.alex.core.chapter04;
+package com.core.defaults;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class DefaultsTest {
+class OptionalsTest {
 
 	@Test
 	void test() {
