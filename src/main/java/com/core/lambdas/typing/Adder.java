@@ -1,0 +1,6 @@
+package com.core.lambdas.typing;
+
+@FunctionalInterface
+public interface Adder {
+	double add(double n1, double n2);
+}
