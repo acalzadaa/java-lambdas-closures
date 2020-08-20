@@ -3,8 +3,6 @@ package com.core.lambdas.typing;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import com.core.lambdas.typing.LambdaUtil;
-
 class LambdaUtilTest {
 
 	@Test
@@ -19,7 +17,6 @@ class LambdaUtilTest {
 		Assertions.assertEquals("HolaMundo", util.testJoiner((x, y) -> x + y));
 		Assertions.assertEquals("Hola Mundo", util.testJoiner((x, y) -> x + " " + y));
 		Assertions.assertEquals("HOLA MUNDO", util.testJoiner((x, y) -> x.toUpperCase() + " " + y.toUpperCase()));
-
 	}
 
 }
