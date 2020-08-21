@@ -1,4 +1,4 @@
-package com.core.lambdas.functions;
+package com.core.functional.interfaces.consumer;
 
 import java.util.Arrays;
 import java.util.function.Consumer;

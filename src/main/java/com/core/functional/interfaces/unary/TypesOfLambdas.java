@@ -1,4 +1,4 @@
-package com.core.lambdas.functions;
+package com.core.functional.interfaces.unary;
 
 import java.util.function.BinaryOperator;
 import java.util.function.Predicate;

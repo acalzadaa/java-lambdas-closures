@@ -1,4 +1,4 @@
-package com.core.lambdas.functions;
+package com.core.functional.interfaces.functions;
 
 /*Anonymous Inner Classes as a Closure*/
 

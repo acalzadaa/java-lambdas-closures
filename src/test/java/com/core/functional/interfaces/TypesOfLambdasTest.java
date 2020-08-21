@@ -1,9 +1,9 @@
-package com.core.lambdas.functions;
+package com.core.functional.interfaces;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import com.core.lambdas.functions.TypesOfLambdas;
+import com.core.functional.interfaces.unary.TypesOfLambdas;
 
 class TypesOfLambdasTest {
 

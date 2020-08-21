@@ -7,3 +7,4 @@ This project is about learning by heart all there is to know about Lambdas, Stre
 - Java 9 Language Features, 2nd Edition
 
 And because I like TDD every exercise starts with a test using JUnit4 in such an extreme level that there are some exercises than contains only tests.
+

@@ -1,29 +1,21 @@
 package com.core.lambdas;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.util.function.Function;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import com.core.lambdas.Lambdas;
-import com.core.lambdas.LambdasChained;
 
 class LambdasChainedTest {
 
 	@Test
-	void test() {
-		Lambdas lambdas = new Lambdas();
-		LambdasChained lambdaschain = new LambdasChained();
+	void testLambdasChained() {
+		LambdasChained chain = new LambdasChained();
 
-		// this lambda
-		assertEquals(lambdaschain.func.apply(6), 12);
-		assertEquals(lambdaschain.func.apply(0), 0);
+		Function<Integer, Integer> squareAddOne = chain.square.andThen(chain.addOne);
+		Function<Integer, Integer> addOneSquare = chain.square.compose(chain.addOne);
 
-		// the other lambda
-		assertEquals(lambdas.func.apply("Alex"), 4);
-		assertEquals(lambdas.func.apply("Sam"), 3);
-
-		// chained lambdas
-		assertEquals(lambdas.func.andThen(lambdaschain.func).apply("alex"), 8);
+		Assertions.assertEquals(10, squareAddOne.apply(3));
+		Assertions.assertEquals(16, addOneSquare.apply(3));
 
 	}
 
