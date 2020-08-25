@@ -1,5 +1,7 @@
 package com.core.streams;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -8,9 +10,23 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import com.core.Track;
-import com.core.streams.Streams;
 
 class StreamsTest {
+
+	Streams streams = new Streams();
+
+	@Test
+	void filteredListsTest() {
+		List<String> items = new ArrayList<>();
+		items.add("acida");
+		items.add("anima");
+		items.add("berilio");
+		items.add("cesio");
+
+		assertEquals(2, streams.filteredListsPrefix(items, "a").size());
+		assertEquals(2, streams.filteredListsPostfix(items, "o").size());
+
+	}
 
 	@Test
 	void testMapsAndCollect() {
