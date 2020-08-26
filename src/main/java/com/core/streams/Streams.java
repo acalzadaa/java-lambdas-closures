@@ -8,6 +8,20 @@ import com.core.Track;
 
 public class Streams {
 
+	public int squareOddIntegers(List<Integer> numbers) {
+		return numbers.stream().filter(number -> number % 2 == 1).map(number -> number * number).reduce(0,
+				Integer::sum);
+	}
+
+	public int squareAllIntegers(List<Integer> numbers) {
+		return numbers.stream().map(number -> number * number).reduce(0, Integer::sum);
+
+		/*
+		 * return numbers.stream().map(n -> n * n).reduce(0, (a,b) -> a+n); Note:
+		 * reduce( Initial Value, ConstructorReference );
+		 */
+	}
+
 	public List<String> maps(List<String> names) {
 		return names.stream().map(x -> x.toUpperCase()).collect(Collectors.toList());
 	}
