@@ -32,6 +32,8 @@ Binary
 
 ### Collector
 
+
+
 ### Streams
 
 Filter
@@ -44,3 +46,8 @@ Reduce
 ### Defaults
 
 ### Optional
+
+Optional
+OptionalInt
+OptionalDouble
+OptionalLong
