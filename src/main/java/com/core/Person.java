@@ -1,11 +1,8 @@
 package com.core;
 
-import java.util.List;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
-import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
@@ -14,13 +11,19 @@ import lombok.Setter;
 @Getter
 @Setter
 @RequiredArgsConstructor
-public class Artist {
-	@NonNull
-	private String name;
+public class Person {
 
-	private List<Artist> members;
-	@NonNull
-	private String origin;
-	private boolean isSolo;
+	public static enum Genre {
+		MALE, FEMALE;
+	}
+
+	private long id;
+	private String name;
+	private double salary;
+	private Genre genre;
+
+	public boolean isFemale() {
+		return this.genre.name().contains(Genre.FEMALE.toString()) ? true : false;
+	}
 
 }

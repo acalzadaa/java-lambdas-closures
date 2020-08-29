@@ -18,4 +18,5 @@ public class Album {
 	private List<Track> tracks;
 	private List<Artist> musicians;
 	private Artist mainMusician;
+
 }

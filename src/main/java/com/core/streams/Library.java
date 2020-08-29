@@ -17,4 +17,5 @@ import lombok.Setter;
 public class Library {
 	private final List<Book> books = new ArrayList<>();
 	private final Map<Book, String> featuredBooks = new HashMap<>();
+
 }
