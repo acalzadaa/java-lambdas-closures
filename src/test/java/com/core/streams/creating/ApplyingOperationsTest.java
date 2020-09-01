@@ -2,6 +2,7 @@ package com.core.streams.creating;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -32,6 +33,18 @@ class ApplyingOperationsTest {
 		numbers.add(9);
 		ApplyingOperations apply = new ApplyingOperations();
 		Assertions.assertEquals(numbers, apply.applyingMapOperation());
+
+		Stream.of(1, 2, 3).map(n -> Stream.of(n, n * n)).forEach(e -> e.forEach(System.out::println));
+
+		Stream.of(1, 2, 3).flatMap(n -> Stream.of(n, n * n)).forEach(System.out::println);
+
+	}
+
+	@Test
+	void testFilters() {
+
+		Stream.of(1, 2, 3, 4, 5, 6, 7, 8);
+
 	}
 
 }
